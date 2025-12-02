@@ -1,0 +1,25 @@
+#container2 {
+    border: 1px solid black;
+    width: 70%;
+    height: 500px;
+    margin: 2px auto;
+}
+#question {
+    font-size: 25px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#diffLevel {
+    font-size: 18px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#opt {
+    font-size: 18px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#allOpt {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
