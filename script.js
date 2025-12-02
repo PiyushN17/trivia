@@ -25,6 +25,10 @@ let subErr = document.getElementById('subErr');
 let points = document.getElementById('points');
 let p1Points = document.getElementById('p1Points');
 let p2Points = document.getElementById('p2Points');
+let leaderboard = document.getElementById('leaderboard');
+let play1 = document.getElementById('play1');
+let play2 = document.getElementById('play2');
+let winner = document.getElementById('winner');
 
 let i = 0;
 let j = 0;
@@ -52,7 +56,7 @@ btn.addEventListener('click', function(event) {
   else {
     err.innerText = 'Error! Enter Required Fields';
   }
-})
+});
 
 async function getQues(category) {
   try {
@@ -94,7 +98,7 @@ subBtn.addEventListener('click', function() {
     container2.hidden = false;
     getQues(categoryList.value);
   }
-})
+});
 ansSub.addEventListener('click', function() {
   const selected = document.querySelector("input[name='answer']:checked");
   if (!selected) {
@@ -122,15 +126,34 @@ ansSub.addEventListener('click', function() {
     }
   }
   if (j < respArray[i].length - 1) {
-      j++;
-  } else if (i < respArray.length - 1) {
-      i++;
-      j = 0;
-  } else {
-      alert("Quiz finished!");
-      return;
+    j++;
+  } 
+  else if (i < respArray.length - 1) {
+    i++;
+    j = 0;
+  } 
+  else {
+    container2.hidden = true;
+    points.hidden = true;
+    leaderboard.hidden = false;
+    if(counter1 > counter2) {
+      winner.innerText = nameArr[0] + ' Won!!!';
+      play1.innerText = '1. ' + p1Points.innerText;
+      play2.innerText = '2. ' + p2Points.innerText;
+    }
+    else if(counter1 === counter2) {
+      winner.innerText = "It's a tie!";
+      play1.innerText = '1. ' + p1Points.innerText;
+      play2.innerText = '2. ' + p2Points.innerText;
+    }
+    else {
+      winner.innerText = nameArr[1] + ' Won!!!';
+      play1.innerText = '1. ' + p2Points.innerText;
+      play2.innerText = '2. ' + p1Points.innerText;
+    }
+    return;
   }
-    selected.checked = false;
-    turnCounter++;
-    newQuestion();
-})
+  selected.checked = false;
+  turnCounter++;
+  newQuestion();
+});
