@@ -3,4 +3,4 @@
 -- New JS File will be added along with HTML and CSS
 -- This will use a Trivia API to fetch data
 -- It is a Open Source API
--- I have updated the code 
+-- I have updated the code - HTML, CSS and JS file
