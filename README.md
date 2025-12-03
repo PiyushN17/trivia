@@ -5,3 +5,4 @@
 -- It is a Open Source API
 -- I have updated the code - HTML, CSS and JS file
 -- Update the category by removing the current selected category
+-- Removed edge cases and bugs
