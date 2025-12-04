@@ -162,7 +162,6 @@ ansSub.addEventListener('click', function() {
     i = 0;
     j = 0;
     respArray = [];
-  
     return;
   }
   selected.checked = false;
