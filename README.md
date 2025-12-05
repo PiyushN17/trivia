@@ -7,5 +7,6 @@
 -- Update the category by removing the current selected category
 -- Removed edge cases and bugs
 -- Seperated summary at category end and final leaderboard
---Check answer button
---removed all the alerts on correct and wrong answers
+-- Check answer button
+-- removed all the alerts on correct and wrong answers
+-- added error handling in score updation
