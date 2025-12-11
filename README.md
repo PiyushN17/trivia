@@ -12,3 +12,4 @@
 -- added error handling in score updation
 -- added a few css properties
 -- Need to make it responsive
+-- Made a new CSS file
