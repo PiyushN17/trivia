@@ -88,7 +88,6 @@ async function getQues(category) {
       const final = await out.json();
       respArray.push(final);
     }
-    console.log(respArray);
     newQuestion();
   }
   catch(e) {
